@@ -270,7 +270,7 @@ function runMatter() {
       width: dimensions.width,
       height: dimensions.height,
       wireframes: false,
-      background: 'rgb(240,240,240)'
+      background: '#B0B1B3'
     }
   });
 
@@ -288,10 +288,10 @@ function runMatter() {
   var attractiveBody = Bodies.circle(
     render.options.width / 2,
     render.options.height / 2,
-    (Math.max(dimensions.width / 8, dimensions.height / 8)) / 2,
+    (Math.max(dimensions.width / 10, dimensions.height / 10)) / 2,
     {
       render: {
-        fillStyle: `rgb(240,240,240)`,
+        fillStyle: `#B0B1B3`,
         strokeStyle: `rgb(0,0,0)`,
         lineWidth: 1
       },
@@ -385,15 +385,15 @@ function runMatter() {
   var graphic = Bodies.rectangle(60, 420, 223, 60, { chamfer: { radius: radius }, mass: 0.1, friction: 0, frictionAir: 0.01, render: { sprite: { texture: 'https://maria-studiodialect.github.io/hosted-assets/04.png', xScale: 0.5, yScale: 0.5 } } })
   var photo = Bodies.rectangle(50, 380, 174, 62, { chamfer: { radius: radius }, mass: 0.1, friction: 0, frictionAir: 0.01, render: { sprite: { texture: 'https://maria-studiodialect.github.io/hosted-assets/05.png', xScale: 0.5, yScale: 0.5 } } })
   // video
-  //var documentary = Bodies.rectangle(220, 540, 474, 161, { chamfer: { radius: radius }, mass: 0.1, friction: 0, frictionAir: 0.01, render: { sprite: { texture: 'https://i.imgur.com/QYNTBNr.png', xScale: 0.5, yScale: 0.5 } } })
-  //var animation = Bodies.rectangle(200, 490, 128, 40, { chamfer: { radius: radius }, mass: 0.1, friction: 0, frictionAir: 0.01, render: { sprite: { texture: 'https://i.imgur.com/rSnEY9Q.png', xScale: 0.5, yScale: 0.5 } } })
-  //var vintage = Bodies.rectangle(190, 440, 104, 40, { chamfer: { radius: radius }, mass: 0.1, friction: 0, frictionAir: 0.01, render: { sprite: { texture: 'https://i.imgur.com/5BSBvSm.png', xScale: 0.5, yScale: 0.5 } } })
-  //var short = Bodies.rectangle(170, 390, 82, 40, { chamfer: { radius: radius }, mass: 0.1, friction: 0, frictionAir: 0.01, render: { sprite: { texture: 'https://i.imgur.com/VEyrikN.png', xScale: 0.5, yScale: 0.5 } } })
+  var documentary = Bodies.rectangle(220, 540, 238, 59, { chamfer: { radius: radius }, mass: 0.1, friction: 0, frictionAir: 0.01, render: { sprite: { texture: 'https://maria-studiodialect.github.io/hosted-assets/06.png', xScale: 0.5, yScale: 0.5 } } })
+  var animation = Bodies.rectangle(200, 490, 200, 70, { chamfer: { radius: radius }, mass: 0.1, friction: 0, frictionAir: 0.01, render: { sprite: { texture: 'https://maria-studiodialect.github.io/hosted-assets/07.png', xScale: 0.5, yScale: 0.5 } } })
+  var play = Bodies.rectangle(190, 440, 208, 71, { chamfer: { radius: radius }, mass: 0.1, friction: 0, frictionAir: 0.01, render: { sprite: { texture: 'https://maria-studiodialect.github.io/hosted-assets/08.png', xScale: 0.5, yScale: 0.5 } } })
+  var climb = Bodies.rectangle(190, 440, 249, 62, { chamfer: { radius: radius }, mass: 0.1, friction: 0, frictionAir: 0.01, render: { sprite: { texture: 'https://maria-studiodialect.github.io/hosted-assets/09.png', xScale: 0.5, yScale: 0.5 } } })
 
 
   // add all of the bodies to the world
   World.add(world, [
-    illustration, art, threeD, graphic, photo,
+    illustration, art, threeD, graphic, photo, documentary, animation, play, climb
   ]);
   // add mouse control
   var mouse = Mouse.create(render.canvas);

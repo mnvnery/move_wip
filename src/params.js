@@ -21,12 +21,13 @@ export const DEFAULT_LINE_WIDTH = 2;
 export const DEFAULT_RADIUS = 4;
 
 export const VIDEO_SIZE = {
+  '1280 X 720': { width: 1280, height: 720 },
   '640 X 480': { width: 640, height: 480 },
   '640 X 360': { width: 640, height: 360 },
   '360 X 270': { width: 360, height: 270 }
 };
 export const STATE = {
-  camera: { targetFPS: 60, sizeOption: '360 X 270' },
+  camera: { targetFPS: 60, sizeOption: '1280 X 720' },
   backend: '',
   flags: {},
   modelConfig: {}
